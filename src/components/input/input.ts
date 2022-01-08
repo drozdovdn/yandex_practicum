@@ -3,6 +3,7 @@ import {InputTmpl} from "./input.tmpl";
 import './input.pcss';
 
 type dataProps = {
+    type: string,
     label: string,
     className?: string,
     onfocus?: ()=> void,
@@ -13,6 +14,7 @@ type InputProps = (data: dataProps) => string
 
 
 export const Input: InputProps = ({
+                                      type,
                                       label,
                                       className
 }) => {
@@ -43,6 +45,6 @@ export const Input: InputProps = ({
  return compile(InputTmpl, {
      label,
      className,
-     type: 'text',
+     type,
  })
 }

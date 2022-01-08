@@ -1,9 +1,9 @@
-import {get} from "../utils/get";
-import {processingWith} from "./processWith";
-
 /***************
  * Шаблонизатор
  * *************
+ *
+ * !!Важно:
+ *      Каждый ключ {{value}} должен находится на новой строке
  *
  * переменные:
  *      {{value}}
@@ -13,6 +13,8 @@ import {processingWith} from "./processWith";
  *      {{/with}}
  */
 
+import {get} from "../utils/get";
+import {processingWith} from "./processWith";
 
 /**
  * Функция принимает шаблон и сонтекст, возвращает string

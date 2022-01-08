@@ -1,5 +1,5 @@
 export const InputTmpl = `
-<label tabindex="0">
+<label>
     <input 
        class="input {{className}}" 
        type="{{type}}"
