@@ -1,12 +1,13 @@
-import './login.pcss';
+import '../form.pcss';
+import {formTmpl} from "../form.tmpl";
 import Input from "../../../../components/input";
 import {compile} from "../../../../templater";
-import {loginTmpl} from "./login.tmpl";
 import Title from "../../../../components/title";
 import Button from "../../../../components/button";
 
 
-const loginContext = {
+
+const signInContext = {
     title: Title('Вход'),
     data: [
         {
@@ -21,9 +22,8 @@ const loginContext = {
         title: 'Нет аккаунта?',
         href: '/home/signup',
     }
-
 }
 
-export const Login = () => {
-    return compile(loginTmpl, loginContext)
+export const SignIn = () => {
+    return compile(formTmpl, signInContext)
 }

@@ -1,19 +1,20 @@
 import {compile} from "../../templater";
 import {homeTmpl} from "./home.tmpl";
 import './home.pcss';
-import Login from "./modules/login";
+import SignIn from "./modules/signIn";
+import SignUp from "./modules/signUp";
 
 const {href} = window.location
 
 //Переменная хранящая в себе контент
-let content = Login()
+let content = SignIn()
 
 if(href.includes('home/signin')) {
-    content = Login()
+    content = SignIn()
 }
 
 if(href.includes('home/signup')) {
-    content = 'signup'
+    content = SignUp()
 }
 
 export const Home = () => {
