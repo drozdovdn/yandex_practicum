@@ -12,6 +12,17 @@ const loginContext = {
             input:  Input({label: 'Пароль'})
         },
     ],
+    data2: [
+        {
+            input:  Input({label: 'Логин'})
+        },
+        {
+            input:  Input({label: 'Пароль'})
+        },
+        {
+            input:  Input({label: 'Пароль'})
+        },
+    ],
     button: {
         title: 'Авторизация'
     }

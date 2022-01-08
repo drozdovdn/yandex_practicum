@@ -13,6 +13,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
-    "postcss-nested": "^5.0.6"
+    "postcss-custom-properties": "^12.0.4",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-url": "^10.1.3"
   }
 }

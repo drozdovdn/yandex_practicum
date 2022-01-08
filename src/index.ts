@@ -1,7 +1,8 @@
+import './main.pcss';
 import Block from "./components/block";
 import Input from "./components/input";
 import Login from "./pages/home/modules/login";
-import './main.css';
+
 
 const root = document.querySelector('.root')
 

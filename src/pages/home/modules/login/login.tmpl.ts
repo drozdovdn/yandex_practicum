@@ -4,6 +4,9 @@ export const loginTmpl = `
        {{#with data}}
            <div>{{input}}</div>
        {{ /with }}
+       {{#with data2}}
+           <div>{{input}}</div>
+       {{ /with }}
      <button>{{button.title}}</button>
     </section>
 `
