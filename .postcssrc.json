@@ -3,7 +3,8 @@
 
     "postcss-nested": true,
     "autoprefixer": {
-      "grid": true
+      "grid": true,
+      "flex": true
     }
   }
 }
