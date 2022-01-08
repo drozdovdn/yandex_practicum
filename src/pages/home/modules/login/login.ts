@@ -7,7 +7,7 @@ import Button from "../../../../components/button";
 
 
 const loginContext = {
-    title: Title('Логин'),
+    title: Title('Вход'),
     data: [
         {
             input:  Input({label: 'Логин', type: 'text'})
@@ -19,13 +19,11 @@ const loginContext = {
     button: Button({title: 'Авторизация'}),
     link: {
         title: 'Нет аккаунта?',
-        href: '/home/#login',
-
+        href: '/home/signup',
     }
 
 }
 
 export const Login = () => {
-    console.log({loginContext})
     return compile(loginTmpl, loginContext)
 }
