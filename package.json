@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "node index.ts",
+    "build": "parcel build ./static/index.html",
     "dev": "parcel ./static/index.html  --port=3000 --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "drozdovdn",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.2",
     "parcel": "^2.1.0"
   },
   "devDependencies": {

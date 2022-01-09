@@ -8,6 +8,7 @@ import {compile} from "../../../../templater";
 
 const signUpContext = {
     title: Title('Регистрация'),
+    className: 'sign-up',
     data: [
         {
             input:  Input({label: 'Почта', type: 'text'})
@@ -34,7 +35,7 @@ const signUpContext = {
     button: Button({title: 'Зарегистрироваться'}),
     link: {
         title: 'Войти',
-        href: '/home/signin',
+        href: '#signin',
     }
 }
 

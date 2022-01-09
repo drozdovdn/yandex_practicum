@@ -1,5 +1,5 @@
 export const formTmpl = `
-    <section class="form">
+    <section class="form {{className}}">
     {{title}}
     <div class="form__body">
      {{#with data}}

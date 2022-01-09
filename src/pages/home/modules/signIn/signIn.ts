@@ -9,6 +9,7 @@ import Button from "../../../../components/button";
 
 const signInContext = {
     title: Title('Вход'),
+    className: 'sign-in',
     data: [
         {
             input:  Input({label: 'Логин', type: 'text'})
@@ -20,7 +21,7 @@ const signInContext = {
     button: Button({title: 'Авторизация'}),
     link: {
         title: 'Нет аккаунта?',
-        href: '/home/signup',
+        href: '#signup',
     }
 }
 

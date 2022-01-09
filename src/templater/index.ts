@@ -34,7 +34,6 @@ export const compile = (template, context) => {
             if(tmplValue.startsWith('#with')) { //Если это цикл
                 //Передаю в функцию по обработке циклов шаблон и ключ начала цикла
                _template = processingWith(_template, key, _context)
-                console.log({_template})
             }
 
             const data = get(_context, tmplValue);
