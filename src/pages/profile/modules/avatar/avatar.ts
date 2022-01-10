@@ -4,7 +4,11 @@ import {avatarTmpl} from "./avatar.tmpl";
 
 const avatarContext = {
     src: '',
-    name: 'Иван'
+    name: 'Иван',
+    hover: {
+        href: '#',
+        text: 'Поменять аватар'
+    }
 }
 
 export const Avatar = () => {

@@ -1,7 +1,30 @@
+
 .avatar {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
+
+}
+.avatar__hover {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.avatar__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    opacity: 0;
+    text-align: center;
 }
 .avatar__wrapper-img {
     width: 130px;
@@ -12,6 +35,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    &:hover .avatar__hover {
+        opacity: 0.5;
+    }
+    &:hover .avatar__text {
+        opacity: 1;
+    }
 }
 .avatar__img {
 

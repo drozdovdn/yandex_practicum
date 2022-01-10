@@ -4,7 +4,8 @@ import {itemControlTmpl} from "./itemControl.tmpl";
 
 export const ItemControl = ({
                                 title,
+                                href = '#',
                                 className = ''
 }) => {
-    return compile(itemControlTmpl, {title, className})
+    return compile(itemControlTmpl, {title, className, href})
 }

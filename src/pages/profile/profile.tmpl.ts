@@ -5,9 +5,9 @@ export const profileTmpl = `
         {{backPanel}}
       </div>
       <div class="profile__right">
-        <div>{{avatar}}</div>
+        <div class="profile__avatar">{{avatar}}</div>
           {{settings}}
-        <div>{{control}}</div>    
+          {{control}}    
       </div>
     </section>
   

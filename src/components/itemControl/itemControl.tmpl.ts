@@ -1,6 +1,8 @@
 
 export const itemControlTmpl = `
-    <button class="item-control {{className}}">
-      
-      {{title}}
-    </button>`;
+    <a href="{{href}}"
+       class="item-control {{className}}">
+        
+        {{title}}
+    </a>
+`;

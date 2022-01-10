@@ -34,7 +34,7 @@ const root = document.querySelector('.root')
 
 // root.insertAdjacentHTML('afterbegin', Error())
 root.insertAdjacentHTML('afterbegin', Profile())
-root.insertAdjacentHTML('afterbegin', ItemControl({title: 'Изменить данные'}))
+// root.insertAdjacentHTML('afterbegin', ItemControl({title: 'Изменить данные' , className: 'item-control_green'}))
 // root.insertAdjacentHTML('afterbegin', SettingsProfile())
 // root.insertAdjacentHTML('afterbegin', InputProfile({
 //     name: 'name',

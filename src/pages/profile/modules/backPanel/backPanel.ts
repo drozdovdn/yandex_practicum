@@ -5,7 +5,7 @@ import {backPanelTmpl} from "./backPanel.tmpl";
 const backPanelContext = {
     link: {
         href: '#caht',
-        name: '< Назад'
+        name: 'Назад'
     }
 }
 

@@ -4,12 +4,13 @@ import {compile} from "../../templater";
 import {profileTmpl} from "./profile.tmpl";
 import Avatar from "./modules/avatar";
 import BackPanel from "./modules/backPanel";
+import Control from "./modules/control";
 
 const profileContext = {
     backPanel: BackPanel(),
     avatar: Avatar(),
     settings: SettingsProfile(),
-    control: 'control'
+    control: Control()
 }
 
 
