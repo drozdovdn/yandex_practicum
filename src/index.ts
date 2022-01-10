@@ -7,6 +7,8 @@ import SignIn from "./pages/home/modules/signIn";
 import SignUp from "./pages/home/modules/signUp";
 import {Profile} from "./pages/profile/profile";
 import ItemControl from "./components/itemControl";
+import ChangePassword from "./pages/profile/modules/changePassword";
+import Chat from "./pages/chat";
 
 
 const root = document.querySelector('.root')
@@ -33,7 +35,9 @@ const root = document.querySelector('.root')
 
 
 // root.insertAdjacentHTML('afterbegin', Error())
-root.insertAdjacentHTML('afterbegin', Profile())
+// root.insertAdjacentHTML('afterbegin', ChangePassword())
+root.insertAdjacentHTML('afterbegin', Chat())
+// root.insertAdjacentHTML('afterbegin', Profile())
 // root.insertAdjacentHTML('afterbegin', ItemControl({title: 'Изменить данные' , className: 'item-control_green'}))
 // root.insertAdjacentHTML('afterbegin', SettingsProfile())
 // root.insertAdjacentHTML('afterbegin', InputProfile({
