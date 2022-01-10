@@ -5,6 +5,7 @@ import {InputProfile} from "./components/inputProfile/inputProfile";
 import {SettingsProfile} from "./pages/profile/modules/settings/settings";
 import SignIn from "./pages/home/modules/signIn";
 import SignUp from "./pages/home/modules/signUp";
+import {Profile} from "./pages/profile/profile";
 
 
 const root = document.querySelector('.root')
@@ -31,7 +32,8 @@ const root = document.querySelector('.root')
 
 
 // root.insertAdjacentHTML('afterbegin', Error())
-root.insertAdjacentHTML('afterbegin', SettingsProfile())
+root.insertAdjacentHTML('afterbegin', Profile())
+// root.insertAdjacentHTML('afterbegin', SettingsProfile())
 // root.insertAdjacentHTML('afterbegin', InputProfile({
 //     name: 'name',
 //     value: 'yandex@mail.ru'
