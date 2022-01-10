@@ -6,13 +6,14 @@ import {SettingsProfile} from "./pages/profile/modules/settings/settings";
 import SignIn from "./pages/home/modules/signIn";
 import SignUp from "./pages/home/modules/signUp";
 import {Profile} from "./pages/profile/profile";
+import ItemControl from "./components/itemControl";
 
 
 const root = document.querySelector('.root')
 
 // root.insertAdjacentHTML('afterbegin', Home())
-
-
+//
+//
 // window.addEventListener('hashchange', ()=>{
 //     const {hash} = window.location
 //
@@ -33,6 +34,7 @@ const root = document.querySelector('.root')
 
 // root.insertAdjacentHTML('afterbegin', Error())
 root.insertAdjacentHTML('afterbegin', Profile())
+root.insertAdjacentHTML('afterbegin', ItemControl({title: 'Изменить данные'}))
 // root.insertAdjacentHTML('afterbegin', SettingsProfile())
 // root.insertAdjacentHTML('afterbegin', InputProfile({
 //     name: 'name',
