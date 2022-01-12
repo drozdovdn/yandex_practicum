@@ -9,6 +9,7 @@ import {Profile} from "./pages/profile/profile";
 import ItemControl from "./components/itemControl";
 import ChangePassword from "./pages/profile/modules/changePassword";
 import Chat from "./pages/chat";
+import Input from "./components/input";
 
 
 const root = document.querySelector('.root')
@@ -33,10 +34,34 @@ const root = document.querySelector('.root')
 //     }
 // })
 
+function handleLoginClick  (e) {
+    console.log('eee',e)
+}
+
+function handleLoginClick2  (e) {
+    console.log('eee 2',e.value)
+}
+
+
+root.insertAdjacentHTML('afterbegin', Input({label: 'Логин', type: 'text'}, handleLoginClick))
+root.insertAdjacentHTML('afterbegin', Input({label: 'Пароль', type: 'text'}, handleLoginClick2))
+
+
+// const input: HTMLInputElement  = window.document.querySelector('.input')
+// console.log({input})
+//
+// input.addEventListener('change', (e)=> console.log(e))
+//
+// input.onchange = (e)=>{
+//     console.log(e.target)
+// }
+// input.onfocus = (e)=>{
+//     console.log(e.target)
+// }
 
 // root.insertAdjacentHTML('afterbegin', Error())
 // root.insertAdjacentHTML('afterbegin', ChangePassword())
-root.insertAdjacentHTML('afterbegin', Chat())
+// root.insertAdjacentHTML('afterbegin', Chat())
 // root.insertAdjacentHTML('afterbegin', Profile())
 // root.insertAdjacentHTML('afterbegin', ItemControl({title: 'Изменить данные' , className: 'item-control_green'}))
 // root.insertAdjacentHTML('afterbegin', SettingsProfile())

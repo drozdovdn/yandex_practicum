@@ -26,7 +26,6 @@ export const compile = (template, context) => {
     let _template = `${template}`
     const TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;
     let key = null
-
     while ((key = TEMPLATE_REGEXP.exec(_template))) { //Выдергиваю по одному значения
 
         if (key[1]) {
@@ -35,16 +34,13 @@ export const compile = (template, context) => {
                 //Передаю в функцию по обработке циклов шаблон и ключ начала цикла
                _template = processingWith(_template, key, _context)
             }
-
             const data = get(_context, tmplValue);
-
             //Если это функция
             if (typeof data === "function") {
-                console.log({data})
                 window[tmplValue] = data;
                 _template = _template.replace(
                     new RegExp(key[0], "gi"),
-                    `${key[1].trim()}()`
+                    `window.${key[1].trim()}(this)`
                 );
                 continue;
             }

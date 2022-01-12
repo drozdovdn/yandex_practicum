@@ -8,6 +8,7 @@ type dataProps = {
     className?: string,
     onfocus?: ()=> void,
     onblur?: ()=> void
+    onChange?: (e:any)=> void
 }
 
 type InputProps = (data: dataProps) => string
@@ -16,7 +17,8 @@ type InputProps = (data: dataProps) => string
 export const Input: InputProps = ({
                                       type,
                                       label,
-                                      className
+                                      className= '',
+                                      onChange
 }) => {
 
 // //onFocus по умолчанию
@@ -46,5 +48,6 @@ export const Input: InputProps = ({
      label,
      className,
      type,
+     onChange
  })
 }

@@ -12,7 +12,7 @@ const signInContext = {
     className: 'sign-in',
     data: [
         {
-            input:  Input({label: 'Логин', type: 'text'})
+            input:  Input({label: 'Логин', type: 'text', onChange: ()=>console.log('1111')})
         },
         {
             input:  Input({label: 'Пароль', type: 'password'})
@@ -27,4 +27,8 @@ const signInContext = {
 
 export const SignIn = () => {
     return compile(formTmpl, signInContext)
+}
+
+function onChange1() {
+    console.log('onChange1')
 }
