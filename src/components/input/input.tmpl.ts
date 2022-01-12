@@ -3,7 +3,7 @@ export const InputTmpl = `
     <input 
        class="input {{className}}" 
        type="{{type}}"
-       onchange="{{onChange}}"
+       name="{{name}}"
        required
     />
      <span class="label">

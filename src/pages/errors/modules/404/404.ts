@@ -1,10 +1,11 @@
-import '../error.pcss';
-import {compile} from "../../../templater";
+import '../errors.pcss';
+import {compile} from "../../../../templater";
 import {errorTmpl} from "../error.tmpl";
 
 const error404Context = {
     title: '404',
     desc: 'Не туда попали',
+    className: '_404',
     link: {
         title: 'Назад к чатам',
         href: '/chat'

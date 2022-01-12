@@ -1,2 +1,2 @@
-import {Error} from './error';
-export default Error;
+import {Errors} from './errors';
+export default Errors;

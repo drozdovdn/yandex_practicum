@@ -1,5 +1,5 @@
 export const homeTmpl = `
-    <main class="home">
+    <section class="home">
         {{content}}
-    </main>
+    </section>
 `
