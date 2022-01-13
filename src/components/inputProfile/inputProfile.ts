@@ -4,12 +4,14 @@ import './inputProfile.pcss'
 
 export const InputProfile = ({
                                 name,
+                                label,
                                 value,
                                 type = 'text',
                                 disabled = 'disabled'
                              }) => {
     return compile(inputProfileTmpl, {
         name,
+        label,
         value,
         type,
         disabled,

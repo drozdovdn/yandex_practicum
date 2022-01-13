@@ -8,7 +8,6 @@ import Chat from "./pages/chat";
 const root = document.querySelector('.root')
 
 //Временные ссылки для демонстрации
-
 const linksTemplate = `
     <nav class="links">
     <div>
@@ -73,6 +72,7 @@ const linksContext = {
 root.insertAdjacentHTML('afterbegin', compile(linksTemplate, linksContext))
 root.insertAdjacentHTML('afterbegin', Auth())
 
+//Временно вместо роутинга
 window.addEventListener('hashchange', ()=>{
     const {hash} = window.location
     if(hash.includes('auth') || hash === '') {
@@ -84,8 +84,7 @@ window.addEventListener('hashchange', ()=>{
         profile?.remove()
         errors?.remove()
         if(!auth) {
-            console.log('main auth')
-            root.insertAdjacentHTML('afterbegin', Auth())
+            root?.insertAdjacentHTML('afterbegin', Auth())
         }
     }
     if(hash.includes('profile')) {
@@ -95,7 +94,7 @@ window.addEventListener('hashchange', ()=>{
         chat?.remove()
         auth?.remove()
         errors?.remove()
-        root.insertAdjacentHTML('afterbegin', Profile())
+        root?.insertAdjacentHTML('afterbegin', Profile())
     }
     if(hash.includes('chat')) {
         const auth = document.querySelector('.auth')
@@ -104,7 +103,7 @@ window.addEventListener('hashchange', ()=>{
         auth?.remove()
         errors?.remove()
         profile?.remove()
-        root.insertAdjacentHTML('afterbegin', Chat())
+        root?.insertAdjacentHTML('afterbegin', Chat())
     }
     if(hash.includes('error')) {
         const auth = document.querySelector('.auth')
@@ -115,7 +114,7 @@ window.addEventListener('hashchange', ()=>{
         auth?.remove()
         profile?.remove()
         if(!errors) {
-            root.insertAdjacentHTML('afterbegin', Error())
+            root?.insertAdjacentHTML('afterbegin', Error())
         }
     }
 })

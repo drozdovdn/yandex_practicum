@@ -12,14 +12,13 @@ export const Errors = () => {
     //Временная замена роутингу
     window.addEventListener('hashchange', ()=>{
         const {hash} = window.location
-        console.log({hash})
         if(hash.includes('_404_')) {
             const _500 = document.querySelector('._500')
             const _404 = document.querySelector('._404')
             const errors = document.querySelector('.errors')
             _500?.remove()
             if(!_404) {
-                errors.insertAdjacentHTML('afterbegin', Error_404())
+                errors?.insertAdjacentHTML('afterbegin', Error_404())
             }
         }
         if(hash.includes('_500_')) {
@@ -28,7 +27,7 @@ export const Errors = () => {
             const errors = document.querySelector('.errors')
             _404?.remove()
             if(!_500) {
-                errors.insertAdjacentHTML('afterbegin', Error_500())
+                errors?.insertAdjacentHTML('afterbegin', Error_500())
             }
         }
     })

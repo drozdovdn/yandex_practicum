@@ -20,7 +20,7 @@ export const Auth = () => {
             const sighIn = document.querySelector('.sign-in')
             sighUp?.remove()
              if(!sighIn) {
-                 auth.insertAdjacentHTML('afterbegin', SignIn())
+                 auth?.insertAdjacentHTML('afterbegin', SignIn())
              }
         }
         if(hash.includes('signup')) {
@@ -29,7 +29,7 @@ export const Auth = () => {
             const sighUp = document.querySelector('.sign-up')
             sighIn?.remove()
             if(!sighUp) {
-                auth.insertAdjacentHTML('afterbegin', SignUp())
+                auth?.insertAdjacentHTML('afterbegin', SignUp())
             }
 
         }
