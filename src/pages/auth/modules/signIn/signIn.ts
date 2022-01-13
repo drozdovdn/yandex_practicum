@@ -16,7 +16,7 @@ const signInContext = {
             input:  Input({label: 'Пароль', type: 'password', name: 'password'})
         },
     ],
-    button: Button({title: 'Авторизация'}),
+    button: Button({name: 'Авторизация', className: ''}),
     link: {
         title: 'Нет аккаунта?',
         href: '#auth#signup',

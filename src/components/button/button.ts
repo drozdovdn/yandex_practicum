@@ -3,8 +3,8 @@ import {buttonTmpl} from './button.tmpl';
 import './button.pcss';
 
 export const Button = ({
-                           title,
-                            className = ''
+                           name,
+                           className = ''
 }) => {
-    return compile(buttonTmpl, {title, className})
+    return compile(buttonTmpl, {name, className})
 }

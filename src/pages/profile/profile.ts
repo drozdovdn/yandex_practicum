@@ -6,6 +6,7 @@ import Avatar from "./modules/avatar";
 import BackPanel from "./modules/backPanel";
 import Control from "./modules/control";
 import Button from "../../components/button";
+import ChangePassword from "./modules/changePassword";
 
 const profileContext = {
     backPanel: BackPanel(),
@@ -32,4 +33,13 @@ export const Profile = () => {
         console.log({inputSettings})
     }
 
+    const changePasswordButton: HTMLButtonElement = document.querySelector('.item-control__change-password')
+    const profileSettings: HTMLElement = document.querySelector('.profile__settings')
+    const settingsBlock: HTMLElement = document.querySelector('.settings')
+    changePasswordButton.onclick = () => {
+        controlBlock.remove()
+        settingsBlock.remove()
+        profileSettings?.insertAdjacentHTML('afterbegin', ChangePassword())
+        profileControl?.insertAdjacentHTML('afterbegin', Button({title: 'Сохранить', className: 'profile__save-button'}))
+    }
 }
