@@ -94,7 +94,8 @@ window.addEventListener('hashchange', ()=>{
         chat?.remove()
         auth?.remove()
         errors?.remove()
-        root?.insertAdjacentHTML('afterbegin', Profile())
+        Profile()
+        // root?.insertAdjacentHTML('afterbegin', Profile())
     }
     if(hash.includes('chat')) {
         const auth = document.querySelector('.auth')
@@ -118,4 +119,6 @@ window.addEventListener('hashchange', ()=>{
         }
     }
 })
+
+
 

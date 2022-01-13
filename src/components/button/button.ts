@@ -6,5 +6,5 @@ export const Button = ({
                            title,
                             className = ''
 }) => {
-    return compile(buttonTmpl, {title})
+    return compile(buttonTmpl, {title, className})
 }
