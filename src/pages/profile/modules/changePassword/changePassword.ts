@@ -2,6 +2,7 @@ import "./changePassword.pcss";
 import InputProfile from "../../../../components/inputProfile";
 import {compile} from "../../../../templater";
 import {changePasswordTmpl} from "./changePassword.tmpl";
+import {FunProps} from "../../../../models";
 
 
 const changePasswordContext = {
@@ -18,6 +19,6 @@ const changePasswordContext = {
     ]
 }
 
-export const ChangePassword = () => {
+export const ChangePassword:FunProps = () => {
     return compile(changePasswordTmpl, changePasswordContext)
 }

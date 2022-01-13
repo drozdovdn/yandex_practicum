@@ -2,8 +2,9 @@ import Error_404 from "./modules/404";
 import Error_500 from "./modules/500";
 import {compile} from "../../templater";
 import {errorsTmpl} from "./errors.tmpl";
+import {FunProps} from "../../models";
 
-export const Errors = () => {
+export const Errors:FunProps = () => {
 
     //Переменная хранящая в себе контент
     const {hash} = window.location

@@ -1,6 +1,7 @@
 import '../errors.pcss';
 import {compile} from "../../../../templater";
 import {errorTmpl} from "../error.tmpl";
+import {FunProps} from "../../../../models";
 
 const error404Context = {
     title: '404',
@@ -12,6 +13,6 @@ const error404Context = {
     }
 }
 
-export const Error_404 = () => {
+export const Error_404:FunProps = () => {
     return compile(errorTmpl, error404Context)
 }

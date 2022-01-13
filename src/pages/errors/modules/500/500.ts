@@ -1,5 +1,6 @@
 import {compile} from "../../../../templater";
 import {errorTmpl} from "../error.tmpl";
+import {FunProps} from "../../../../models";
 
 
 const error500Context = {
@@ -12,6 +13,6 @@ const error500Context = {
     }
 }
 
-export const Error_500 = () => {
+export const Error_500:FunProps = () => {
     return compile(errorTmpl, error500Context)
 }

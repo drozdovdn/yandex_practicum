@@ -3,10 +3,9 @@ import {compile} from "../../templater";
 import {authTmpl} from "./auth.tmpl";
 import SignIn from "./modules/signIn";
 import SignUp from "./modules/signUp";
+import {FunProps} from "../../models";
 
-
-export const Auth = () => {
-    const {hash} = window.location
+export const Auth: FunProps = () => {
 
     //Переменная хранящая в себе контент
     let content = SignIn()
@@ -31,10 +30,7 @@ export const Auth = () => {
             if(!sighUp) {
                 auth?.insertAdjacentHTML('afterbegin', SignUp())
             }
-
         }
-
-
     })
 
     return compile(authTmpl, {content})

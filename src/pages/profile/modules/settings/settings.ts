@@ -2,6 +2,7 @@ import './settinps.pcss'
 import {InputProfile} from "../../../../components/inputProfile/inputProfile";
 import {compile} from "../../../../templater";
 import {settingsTmpl} from "./settings.tmpl";
+import {FunProps} from "../../../../models";
 
 const settingsContext = {
     data: [
@@ -26,6 +27,6 @@ const settingsContext = {
     ]
 };
 
-export const SettingsProfile = () => {
+export const SettingsProfile:FunProps = () => {
     return compile(settingsTmpl, settingsContext)
 }

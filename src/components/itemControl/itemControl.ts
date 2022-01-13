@@ -2,7 +2,14 @@ import './itemControl.pcss';
 import {compile} from "../../templater";
 import {itemControlTmpl} from "./itemControl.tmpl";
 
-export const ItemControl = ({
+type DataProps = {
+    title: string,
+    className?: string
+}
+
+type ItemControlProps = (data: DataProps) => string
+
+export const ItemControl: ItemControlProps = ({
                                 title,
                                 className = ''
 }) => {

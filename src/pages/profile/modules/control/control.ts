@@ -2,6 +2,7 @@ import './control.pcss';
 import ItemControl from "../../../../components/itemControl";
 import {compile} from "../../../../templater";
 import {controlTmpl} from "./control.tmpl";
+import {FunProps} from "../../../../models";
 
 
 const controlContext = {
@@ -18,6 +19,6 @@ const controlContext = {
     ]
 }
 
-export const Control = () => {
+export const Control:FunProps = () => {
     return compile(controlTmpl, controlContext)
 }

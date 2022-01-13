@@ -4,6 +4,7 @@ import Title from "../../../../components/title";
 import Input from "../../../../components/input";
 import Button from "../../../../components/button";
 import {compile} from "../../../../templater";
+import {FunProps} from "../../../../models";
 
 const signUpContext = {
     title: Title('Регистрация'),
@@ -38,6 +39,6 @@ const signUpContext = {
     }
 }
 
-export const SignUp = () => {
+export const SignUp: FunProps = () => {
     return compile(formTmpl, signUpContext)
 }

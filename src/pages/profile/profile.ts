@@ -7,6 +7,7 @@ import BackPanel from "./modules/backPanel";
 import Control from "./modules/control";
 import Button from "../../components/button";
 import ChangePassword from "./modules/changePassword";
+import {PageProps} from "../../models";
 
 const profileContext = {
     backPanel: BackPanel(),
@@ -16,7 +17,7 @@ const profileContext = {
 }
 
 
-export const Profile = () => {
+export const Profile:PageProps = () => {
 
     const root = document.querySelector('.root')
 
