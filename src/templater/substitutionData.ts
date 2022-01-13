@@ -6,8 +6,7 @@ export const substitutionData =  (tmpl: string, context: object): string => {
     let _context = {...context}
     let key = null
     const TEMPLATE_REGEXP = /\{\{(.*?)\}\}/gi;
-    // console.log({_tmpl})
-    // console.log({_context})
+
     while ((key = TEMPLATE_REGEXP.exec(_tmpl))) {
         if (key[1]) {
             const tmplValue = key[1].trim();

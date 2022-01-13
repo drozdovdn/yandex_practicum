@@ -1,5 +1,6 @@
 export const buttonTmpl = `
     <button class="button {{className}}">
-        {{title}}
+    
+        {{name}}
     </button>
 `

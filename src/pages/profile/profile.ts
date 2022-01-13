@@ -29,8 +29,8 @@ export const Profile = () => {
     changeButton.onclick = ()=> {
         controlBlock.remove()
         inputSettings.forEach(item => item.removeAttribute('disabled'))
-        profileControl?.insertAdjacentHTML('afterbegin', Button({title: 'Сохранить', className: 'profile__save-button'}))
-        console.log({inputSettings})
+        profileControl?.insertAdjacentHTML('afterbegin', Button({name: 'Сохранить', className: 'profile__save-button'}))
+
     }
 
     const changePasswordButton: HTMLButtonElement = document.querySelector('.item-control__change-password')
@@ -40,6 +40,6 @@ export const Profile = () => {
         controlBlock.remove()
         settingsBlock.remove()
         profileSettings?.insertAdjacentHTML('afterbegin', ChangePassword())
-        profileControl?.insertAdjacentHTML('afterbegin', Button({title: 'Сохранить', className: 'profile__save-button'}))
+        profileControl?.insertAdjacentHTML('afterbegin', Button({name: 'Сохранить', className: 'profile__save-button'}))
     }
 }

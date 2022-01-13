@@ -31,7 +31,7 @@ const signUpContext = {
             input:  Input({label: 'Пароль (ещё раз)', type: 'password', name: 'repeat_password'})
         },
     ],
-    button: Button({title: 'Зарегистрироваться'}),
+    button: Button({name: 'Зарегистрироваться'}),
     link: {
         title: 'Войти',
         href: '#auth#signin',
