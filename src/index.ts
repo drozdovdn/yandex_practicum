@@ -1,8 +1,9 @@
 import './main.pcss';
 import {compile} from "./templater";
-import Home from "./pages/home";
+import Auth from "./pages/auth";
 import Profile from "./pages/profile";
 import Error from "./pages/errors";
+import Chat from "./pages/chat";
 
 const root = document.querySelector('.root')
 
@@ -34,6 +35,11 @@ const linksTemplate = `
         {{home.name}}
         </a>
     </li>
+    <li class="links__item">
+        <a href="{{chat.href}}">
+        {{chat.name}}
+        </a>
+    </li>
     </ul>
     </nav>
 `
@@ -53,40 +59,60 @@ const linksContext = {
         name: 'Страница ошибки 404'
     },
     home: {
-        href: '#home',
-        name: 'Home'
+        href: '#auth#signin',
+        name: 'Auth'
+    },
+    chat: {
+        href: '#chat',
+        name: 'Chat'
     },
 }
 
 
 
 root.insertAdjacentHTML('afterbegin', compile(linksTemplate, linksContext))
-root.insertAdjacentHTML('afterbegin', Home())
+root.insertAdjacentHTML('afterbegin', Auth())
 
 window.addEventListener('hashchange', ()=>{
     const {hash} = window.location
-    if(hash.includes('home') || hash === '') {
-        const home = document.querySelector('.home')
+    if(hash.includes('auth') || hash === '') {
+        const auth = document.querySelector('.auth')
         const profile = document.querySelector('.profile')
         const errors = document.querySelector('.errors')
+        const chat = document.querySelector('.chat')
+        chat?.remove()
         profile?.remove()
         errors?.remove()
-        if(!home) {
-            root.insertAdjacentHTML('afterbegin', Home())
+        if(!auth) {
+            console.log('main auth')
+            root.insertAdjacentHTML('afterbegin', Auth())
         }
     }
     if(hash.includes('profile')) {
-        const home = document.querySelector('.home')
+        const auth = document.querySelector('.auth')
         const errors = document.querySelector('.errors')
-        home?.remove()
+        const chat = document.querySelector('.chat')
+        chat?.remove()
+        auth?.remove()
         errors?.remove()
         root.insertAdjacentHTML('afterbegin', Profile())
     }
+    if(hash.includes('chat')) {
+        const auth = document.querySelector('.auth')
+        const errors = document.querySelector('.errors')
+        const profile = document.querySelector('.profile')
+        auth?.remove()
+        errors?.remove()
+        profile?.remove()
+        root.insertAdjacentHTML('afterbegin', Chat())
+    }
     if(hash.includes('error')) {
-        const home = document.querySelector('.home')
+        const auth = document.querySelector('.auth')
         const profile = document.querySelector('.profile')
         const errors = document.querySelector('.errors')
-        home?.remove()
+        const chat = document.querySelector('.chat')
+        chat?.remove()
+        auth?.remove()
         profile?.remove()
         if(!errors) {
             root.insertAdjacentHTML('afterbegin', Error())

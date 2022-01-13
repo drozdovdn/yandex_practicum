@@ -19,7 +19,7 @@ const signInContext = {
     button: Button({title: 'Авторизация'}),
     link: {
         title: 'Нет аккаунта?',
-        href: '#home#signup',
+        href: '#auth#signup',
     }
 }
 

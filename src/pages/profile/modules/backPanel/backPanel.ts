@@ -4,7 +4,7 @@ import {backPanelTmpl} from "./backPanel.tmpl";
 
 const backPanelContext = {
     link: {
-        href: '#caht',
+        href: '#chat',
         name: 'Назад'
     }
 }

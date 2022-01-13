@@ -34,7 +34,7 @@ const signUpContext = {
     button: Button({title: 'Зарегистрироваться'}),
     link: {
         title: 'Войти',
-        href: '#home#signin',
+        href: '#auth#signin',
     }
 }
 
